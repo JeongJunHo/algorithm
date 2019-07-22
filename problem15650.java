@@ -6,37 +6,40 @@ import java.util.Scanner;
 
 
 /*
-¹®Á¦
-ÀÚ¿¬¼ö N°ú MÀÌ ÁÖ¾îÁ³À» ¶§, ¾Æ·¡ Á¶°ÇÀ» ¸¸Á·ÇÏ´Â ±æÀÌ°¡ MÀÎ ¼ö¿­À» ¸ðµÎ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+Nê³¼ M (2)
+ì‹œê°„ ì œí•œ	ë©”ëª¨ë¦¬ ì œí•œ	ì œì¶œ	ì •ë‹µ	ë§žì€ ì‚¬ëžŒ	ì •ë‹µ ë¹„ìœ¨
+1 ì´ˆ	512 MB	2553	2017	1529	79.718%
+ë¬¸ì œ
+ìžì—°ìˆ˜ Nê³¼ Mì´ ì£¼ì–´ì¡Œì„ ë•Œ, ì•„ëž˜ ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” ê¸¸ì´ê°€ Mì¸ ìˆ˜ì—´ì„ ëª¨ë‘ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 
-1ºÎÅÍ N±îÁö ÀÚ¿¬¼ö Áß¿¡¼­ Áßº¹ ¾øÀÌ M°³¸¦ °í¸¥ ¼ö¿­
-°í¸¥ ¼ö¿­Àº ¿À¸§Â÷¼øÀÌ¾î¾ß ÇÑ´Ù.
-ÀÔ·Â
-Ã¹Â° ÁÙ¿¡ ÀÚ¿¬¼ö N°ú MÀÌ ÁÖ¾îÁø´Ù. (1 ¡Â M ¡Â N ¡Â 8)
+1ë¶€í„° Nê¹Œì§€ ìžì—°ìˆ˜ ì¤‘ì—ì„œ ì¤‘ë³µ ì—†ì´ Mê°œë¥¼ ê³ ë¥¸ ìˆ˜ì—´
+ê³ ë¥¸ ìˆ˜ì—´ì€ ì˜¤ë¦„ì°¨ìˆœì´ì–´ì•¼ í•œë‹¤.
+ìž…ë ¥
+ì²«ì§¸ ì¤„ì— ìžì—°ìˆ˜ Nê³¼ Mì´ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ M â‰¤ N â‰¤ 8)
 
-Ãâ·Â
-ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ ¹®Á¦ÀÇ Á¶°ÇÀ» ¸¸Á·ÇÏ´Â ¼ö¿­À» Ãâ·ÂÇÑ´Ù. Áßº¹µÇ´Â ¼ö¿­À» ¿©·¯ ¹ø Ãâ·ÂÇÏ¸é ¾ÈµÇ¸ç, °¢ ¼ö¿­Àº °ø¹éÀ¸·Î ±¸ºÐÇØ¼­ Ãâ·ÂÇØ¾ß ÇÑ´Ù.
+ì¶œë ¥
+í•œ ì¤„ì— í•˜ë‚˜ì”© ë¬¸ì œì˜ ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” ìˆ˜ì—´ì„ ì¶œë ¥í•œë‹¤. ì¤‘ë³µë˜ëŠ” ìˆ˜ì—´ì„ ì—¬ëŸ¬ ë²ˆ ì¶œë ¥í•˜ë©´ ì•ˆë˜ë©°, ê° ìˆ˜ì—´ì€ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ì„œ ì¶œë ¥í•´ì•¼ í•œë‹¤.
 
-¼ö¿­Àº »çÀü ¼øÀ¸·Î Áõ°¡ÇÏ´Â ¼ø¼­·Î Ãâ·ÂÇØ¾ß ÇÑ´Ù.
+ìˆ˜ì—´ì€ ì‚¬ì „ ìˆœìœ¼ë¡œ ì¦ê°€í•˜ëŠ” ìˆœì„œë¡œ ì¶œë ¥í•´ì•¼ í•œë‹¤.
 
-¿¹Á¦ ÀÔ·Â 1 
+ì˜ˆì œ ìž…ë ¥ 1 
 3 1
-¿¹Á¦ Ãâ·Â 1 
+ì˜ˆì œ ì¶œë ¥ 1 
 1
 2
 3
-¿¹Á¦ ÀÔ·Â 2 
+ì˜ˆì œ ìž…ë ¥ 2 
 4 2
-¿¹Á¦ Ãâ·Â 2 
+ì˜ˆì œ ì¶œë ¥ 2 
 1 2
 1 3
 1 4
 2 3
 2 4
 3 4
-¿¹Á¦ ÀÔ·Â 3 
+ì˜ˆì œ ìž…ë ¥ 3 
 4 4
-¿¹Á¦ Ãâ·Â 3 
+ì˜ˆì œ ì¶œë ¥ 3 
 1 2 3 4
  */
 public class problem15650 {
@@ -48,39 +51,39 @@ public class problem15650 {
 		int n = sc.nextInt();
 		int m = sc.nextInt();
 		
-		//n±îÁöÀÇ ¹è¿­
+		//nê¹Œì§€ì˜ ë°°ì—´
 		int[] arr = new int[n];
-		//°¢ ¹è¿­ÀÇ »ç¿ë¿©ºÎ ¹è¿­
+		//ê° ë°°ì—´ì˜ ì‚¬ìš©ì—¬ë¶€ ë°°ì—´
 		isUse = new boolean[n];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = i+1;
 		}
 		
-		//Ãâ·Â¿ë ¸®½ºÆ®
+		//ì¶œë ¥ìš© ë¦¬ìŠ¤íŠ¸
 		ArrayList<Integer> list = new ArrayList<Integer>();
-		//¸Þ¼Òµå ½ÃÀÛ
+		//ë©”ì†Œë“œ ì‹œìž‘
 		dfs(arr, n, m, list);
 	} 
 	
 	static void dfs(int[] arr, int n, int m, ArrayList<Integer> list) {
 		if(list.size() == m) {
-			//¸®½ºÆ® °ªÀÌ ¿À¸§Â÷¼øÀÎÁö °ËÁõ
+			//ë¦¬ìŠ¤íŠ¸ ê°’ì´ ì˜¤ë¦„ì°¨ìˆœì¸ì§€ ê²€ì¦
 			boolean check = true;
 			for (int i = 0; i < list.size(); i++) {
 				for (int j = i; j < list.size(); j++) {
-					//´ÙÀ½ °ª Áß ÇöÀç °ª º¸´Ù ÀûÀº °ªÀÌ µé¾îÀÖ´ÂÁö Å½»ö
+					//ë‹¤ìŒ ê°’ ì¤‘ í˜„ìž¬ ê°’ ë³´ë‹¤ ì ì€ ê°’ì´ ë“¤ì–´ìžˆëŠ”ì§€ íƒìƒ‰
 					if(list.get(i) > list.get(j)) {
 						check = false;
 						break;
 					}
 				}
-				//ÀÌ¹Ì ÇÑ¹øÀÌ¶óµµ ´õ ÀÛÀº ¼ö¸¦ ¸¸³µ´Ù¸é ÁßÁö
+				//ì´ë¯¸ í•œë²ˆì´ë¼ë„ ë” ìž‘ì€ ìˆ˜ë¥¼ ë§Œë‚¬ë‹¤ë©´ ì¤‘ì§€
 				if(check == false) {
 					break;
 				}
 			}
 			
-			//Å½»ö °á°ú°¡ ¿À¸§Â÷¼øÀÌ ¸Â´Ù¸é Ãâ·Â
+			//íƒìƒ‰ ê²°ê³¼ê°€ ì˜¤ë¦„ì°¨ìˆœì´ ë§žë‹¤ë©´ ì¶œë ¥
 			if(check == true) {
 				System.out.println(list.toString());
 			}
@@ -90,13 +93,13 @@ public class problem15650 {
 		for (int i = 0; i < arr.length; i++) {
 			if (isUse[i] == false) {
 				isUse[i] = true;
-				//Àç±Í·Î ³Ñ±â±âÀ§ÇÑ »õ·Î¿î ¸®½ºÆ® »ý¼º (ÀÎ½ºÅÏ½º Å¸ÀÔÀÌ±â ¶§¹®¿¡ ÁÖ¼Ò¸¦ °øÀ¯ÇÏÁö ¾Ê±â À§ÇÔ)
+				//ìž¬ê·€ë¡œ ë„˜ê¸°ê¸°ìœ„í•œ ìƒˆë¡œìš´ ë¦¬ìŠ¤íŠ¸ ìƒì„± (ì¸ìŠ¤í„´ìŠ¤ íƒ€ìž…ì´ê¸° ë•Œë¬¸ì— ì£¼ì†Œë¥¼ ê³µìœ í•˜ì§€ ì•Šê¸° ìœ„í•¨)
 				ArrayList<Integer> tmpList = new ArrayList<Integer>();
-				//ÇöÀç±îÁö ³Ö¾îµÐ ¸®½ºÆ® ´ã±â
+				//í˜„ìž¬ê¹Œì§€ ë„£ì–´ë‘” ë¦¬ìŠ¤íŠ¸ ë‹´ê¸°
 				tmpList.addAll(list);
-				//ÇöÀç ¹Ýº¹ÁßÀÎ °ª Ãß°¡ ÀÔ·Â
+				//í˜„ìž¬ ë°˜ë³µì¤‘ì¸ ê°’ ì¶”ê°€ ìž…ë ¥
 				tmpList.add(arr[i]);
-				//Àç±Í È£Ãâ
+				//ìž¬ê·€ í˜¸ì¶œ
 				dfs(arr, n, m, tmpList);
 				isUse[i] = false;
 			}
